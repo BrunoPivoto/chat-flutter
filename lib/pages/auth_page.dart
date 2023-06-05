@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'package:chat/components/auth_form.dart';
 import 'package:chat/models/auth_form_data.dart';
