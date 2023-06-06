@@ -57,6 +57,7 @@ class MessageBubble extends StatelessWidget {
                 horizontal: 8,
               ),
               child: Column(
+                crossAxisAlignment: belongsToCurrentUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
                 children: [
                   Text(
                     message.userName,
@@ -65,7 +66,10 @@ class MessageBubble extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(message.text),
+                  Text(
+                    message.text,
+                    textAlign: belongsToCurrentUser ? TextAlign.right : TextAlign.left,
+                  ),
                 ],
               ),
             ),
@@ -74,7 +78,7 @@ class MessageBubble extends StatelessWidget {
         Positioned(
           top: 0,
           left: belongsToCurrentUser ? null : 165,
-          right: belongsToCurrentUser ? 5 : null,
+          right: belongsToCurrentUser ? 165 : null,
           child: _showUserImage(message.userImageUrl),
         ),
       ],
