@@ -6,6 +6,7 @@ import 'package:chat/core/models/chat_user.dart';
 import 'package:chat/core/services/auth/auth_service.dart';
 
 class AuthMockService implements AuthService {
+  // ignore: prefer_final_fields
   static Map<String, ChatUser> _users = {};
   static ChatUser? _currentUser;
   static MultiStreamController<ChatUser?>? _controller;
@@ -25,12 +26,12 @@ class AuthMockService implements AuthService {
   }
 
   @override
-  Future<void> signup(String name, String email, String password, File image) async {
+  Future<void> signup(String name, String email, String password, File? image) async {
     final newUser = ChatUser(
       id: Random().nextDouble().toString(),
       name: name,
       email: email,
-      imageUrl: image.path,
+      imageUrl: image?.path ?? 'assetes/images/...',
     );
     _users.putIfAbsent(email, () => newUser);
     _updateUser(newUser);
