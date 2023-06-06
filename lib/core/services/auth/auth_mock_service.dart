@@ -7,14 +7,14 @@ import 'package:chat/core/services/auth/auth_service.dart';
 
 class AuthMockService implements AuthService {
   static final _defaultUser = ChatUser(
-    id: '1',
-    name: 'Usuário Teste',
-    email: 'teste@email.com',
-    imageUrl: 'lib/assets/images/avatar.png',
+    id: '123',
+    name: 'Bruno',
+    email: 'bruno@email.com',
+    imageUrl: 'assets/images/avatar.png',
   );
   // ignore: prefer_final_fields
   static Map<String, ChatUser> _users = {
-    _defaultUser.email : _defaultUser,
+    _defaultUser.email: _defaultUser,
   };
   static ChatUser? _currentUser;
   static MultiStreamController<ChatUser?>? _controller;
@@ -39,7 +39,7 @@ class AuthMockService implements AuthService {
       id: Random().nextDouble().toString(),
       name: name,
       email: email,
-      imageUrl: image?.path ?? 'lib/assets/images/avatar.png',
+      imageUrl: image?.path ?? 'assets/images/avatar.png',
     );
     _users.putIfAbsent(email, () => newUser);
     _updateUser(newUser);

@@ -12,16 +12,16 @@ class ChatMockService implements ChatService {
       text: 'Bom dia Creide',
       createdAt: DateTime.now(),
       userId: '123',
-      userName: 'Usuário de teste',
-      userImageUrl: 'lib/assets/images/avatar.png',
+      userName: 'Bruno',
+      userImageUrl: 'assets/images/avatar.png',
     ),
     ChatMessage(
       id: '2',
       text: 'Bom dia Jurandir',
       createdAt: DateTime.now(),
       userId: '456',
-      userName: 'Usuário de teste 2',
-      userImageUrl: 'lib/assets/images/avatar.png',
+      userName: 'Eliza',
+      userImageUrl: 'assets/images/avatar.png',
     ),
     ChatMessage(
       id: '3',
@@ -29,7 +29,7 @@ class ChatMockService implements ChatService {
       createdAt: DateTime.now(),
       userId: '789',
       userName: 'Usuário de teste 3',
-      userImageUrl: 'lib/assets/images/avatar.png',
+      userImageUrl: 'assets/images/avatar.png',
     ),
   ];
   static MultiStreamController<List<ChatMessage>>? _controller;
