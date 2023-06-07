@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402827486074",
+    "project_id": "chat-flutter-bruno",
+    "storage_bucket": "chat-flutter-bruno.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402827486074:android:110b966a8bfabeaea22cc3",
+        "android_client_info": {
+          "package_name": "br.com.bruno.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402827486074-049284bo27gs29lscuub93afbaf10o47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiVptQsCscPo6_AW5fKRXJGYNDZguqz7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402827486074-049284bo27gs29lscuub93afbaf10o47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
