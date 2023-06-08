@@ -29,6 +29,7 @@ class _NewMessageState extends State<NewMessage> {
       children: [
         Expanded(
           child: TextField(
+            autofocus: true,
             controller: _messageController,
             onChanged: (value) => setState(() => _enteredMessage = value),
             decoration: const InputDecoration(

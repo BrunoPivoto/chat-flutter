@@ -26,7 +26,7 @@ class Messages extends StatelessWidget {
                 key: ValueKey(msgs[index].id),
                 message: msgs[index],
                 belongsToCurrentUser: currentUser?.id == msgs[index].userId,
-              ); //Text(msgs[index].text);
+              );
             },
           );
         }

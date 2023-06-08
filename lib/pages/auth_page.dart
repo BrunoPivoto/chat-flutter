@@ -15,21 +15,21 @@ class _AuthPageState extends State<AuthPage> {
 
   void _handleSubmit(AuthFormData formData) async {
     try {
-      // if (!mounted) return;
+      if (!mounted) return;
       setState(() => _isLoading = true);
       if (formData.islogin) {
         //login
-        AuthService().login(
+        await AuthService().login(
           formData.email,
           formData.password,
         );
       } else {
         //cadastro
-        AuthService().signup(
+        await AuthService().signup(
           formData.name,
           formData.email,
           formData.password,
-          formData.image,
+          formData.image!,
         );
       }
     } catch (error) {
