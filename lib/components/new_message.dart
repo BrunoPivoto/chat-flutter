@@ -28,18 +28,21 @@ class _NewMessageState extends State<NewMessage> {
     return Row(
       children: [
         Expanded(
-          child: TextField(
-            autofocus: true,
-            controller: _messageController,
-            onChanged: (value) => setState(() => _enteredMessage = value),
-            decoration: const InputDecoration(
-              labelText: 'Enviar mensagem...',
+          child: Padding(
+            padding: const EdgeInsets.only(left:8.0),
+            child: TextField(
+              autofocus: true,
+              controller: _messageController,
+              onChanged: (value) => setState(() => _enteredMessage = value),
+              decoration: const InputDecoration(
+                labelText: 'Enviar mensagem...',
+              ),
+              onSubmitted: (value) {
+                if (_enteredMessage.trim().isNotEmpty) {
+                  _sendMessage();
+                }
+              },
             ),
-            onSubmitted: (value) {
-              if (_enteredMessage.trim().isNotEmpty) {
-                _sendMessage();
-              }
-            },
           ),
         ),
         IconButton(
